@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/Repository/CategoryRepository.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1668073152450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1668073152450,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Repository;\n\nuse App\\Entity\\Category;\nuse Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository;\nuse Doctrine\\Persistence\\ManagerRegistry;\n\n/**\n * @extends ServiceEntityRepository<Category>\n *\n * @method Category|null find($id, $lockMode = null, $lockVersion = null)\n * @method Category|null findOneBy(array $criteria, array $orderBy = null)\n * @method Category[]    findAll()\n * @method Category[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)\n */\nclass CategoryRepository extends ServiceEntityRepository\n{\n    public function __construct(ManagerRegistry $registry)\n    {\n        parent::__construct($registry, Category::class);\n    }\n\n    public function save(Category $entity, bool $flush = false): void\n    {\n        $this->getEntityManager()->persist($entity);\n\n        if ($flush) {\n            $this->getEntityManager()->flush();\n        }\n    }\n\n    public function remove(Category $entity, bool $flush = false): void\n    {\n        $this->getEntityManager()->remove($entity);\n\n        if ($flush) {\n            $this->getEntityManager()->flush();\n        }\n    }\n\n//    /**\n//     * @return Category[] Returns an array of Category objects\n//     */\n//    public function findByExampleField($value): array\n//    {\n//        return $this->createQueryBuilder('c')\n//            ->andWhere('c.exampleField = :val')\n//            ->setParameter('val', $value)\n//            ->orderBy('c.id', 'ASC')\n//            ->setMaxResults(10)\n//            ->getQuery()\n//            ->getResult()\n//        ;\n//    }\n\n//    public function findOneBySomeField($value): ?Category\n//    {\n//        return $this->createQueryBuilder('c')\n//            ->andWhere('c.exampleField = :val')\n//            ->setParameter('val', $value)\n//            ->getQuery()\n//            ->getOneOrNullResult()\n//        ;\n//    }\n}\n"
+        }
+    ]
+}

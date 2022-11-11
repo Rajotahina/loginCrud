@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/Entity/Product.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1668072746637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668086472647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \n     #[ORM\\Column(nullable: true)]\n     private ?\\DateTimeImmutable $updatedAt = null;\n \n-    #[ORM\\Column]\n+    #[ORM\\Column ]\n     private ?\\DateTimeImmutable $createdAt = null;\n \n     #[ORM\\ManyToOne(inversedBy: 'products')]\n     #[ORM\\JoinColumn(nullable: false)]\n"
+                },
+                {
+                    "date": 1668086477922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \n     #[ORM\\Column(nullable: true)]\n     private ?\\DateTimeImmutable $updatedAt = null;\n \n-    #[ORM\\Column ]\n+    #[ORM\\Column (nullable:)]\n     private ?\\DateTimeImmutable $createdAt = null;\n \n     #[ORM\\ManyToOne(inversedBy: 'products')]\n     #[ORM\\JoinColumn(nullable: false)]\n"
+                },
+                {
+                    "date": 1668086483525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \n     #[ORM\\Column(nullable: true)]\n     private ?\\DateTimeImmutable $updatedAt = null;\n \n-    #[ORM\\Column (nullable:)]\n+    #[ORM\\Column (nullable: true)]\n     private ?\\DateTimeImmutable $createdAt = null;\n \n     #[ORM\\ManyToOne(inversedBy: 'products')]\n     #[ORM\\JoinColumn(nullable: false)]\n"
+                },
+                {
+                    "date": 1668086518037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \n     #[ORM\\Column(nullable: true)]\n     private ?\\DateTimeImmutable $updatedAt = null;\n \n-    #[ORM\\Column (nullable: true)]\n+    #[ORM\\Column (nullable: false)]\n     private ?\\DateTimeImmutable $createdAt = null;\n \n     #[ORM\\ManyToOne(inversedBy: 'products')]\n     #[ORM\\JoinColumn(nullable: false)]\n"
+                },
+                {
+                    "date": 1668086554424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \n     #[ORM\\Column(nullable: true)]\n     private ?\\DateTimeImmutable $updatedAt = null;\n \n-    #[ORM\\Column (nullable: false)]\n+    #[ORM\\Column (nullable: true)]\n     private ?\\DateTimeImmutable $createdAt = null;\n \n     #[ORM\\ManyToOne(inversedBy: 'products')]\n     #[ORM\\JoinColumn(nullable: false)]\n"
+                },
+                {
+                    "date": 1668087153110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -120,9 +120,9 @@\n     {\n         return $this->createdAt;\n     }\n \n-    public function setCreatedAt(\\DateTimeImmutable $createdAt): self\n+    public function setCreatedAt(?\\DateTimeImmutable $createdAt): self\n     {\n         $this->createdAt = $createdAt;\n \n         return $this;\n"
+                },
+                {
+                    "date": 1668087360528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \n     #[ORM\\Column(nullable: true)]\n     private ?\\DateTimeImmutable $updatedAt = null;\n \n-    #[ORM\\Column (nullable: true)]\n+    #[ORM\\Column ]\n     private ?\\DateTimeImmutable $createdAt = null;\n \n     #[ORM\\ManyToOne(inversedBy: 'products')]\n     #[ORM\\JoinColumn(nullable: false)]\n"
+                },
+                {
+                    "date": 1668087394591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \n     #[ORM\\Column(nullable: true)]\n     private ?\\DateTimeImmutable $updatedAt = null;\n \n-    #[ORM\\Column ]\n+    #[ORM\\Column (nullable: true)]\n     private ?\\DateTimeImmutable $createdAt = null;\n \n     #[ORM\\ManyToOne(inversedBy: 'products')]\n     #[ORM\\JoinColumn(nullable: false)]\n"
+                },
+                {
+                    "date": 1668087401147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n     #[ORM\\Column(nullable: true)]\n     private ?\\DateTimeImmutable $updatedAt = null;\n \n     #[ORM\\Column (nullable: true)]\n-    private ?\\DateTimeImmutable $createdAt = null;\n+    private ?\\DateTimeImmutable $createdAt;\n \n     #[ORM\\ManyToOne(inversedBy: 'products')]\n     #[ORM\\JoinColumn(nullable: false)]\n     private ?category $category = null;\n"
+                },
+                {
+                    "date": 1668087436721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n     #[ORM\\Column(nullable: true)]\n     private ?\\DateTimeImmutable $updatedAt = null;\n \n     #[ORM\\Column (nullable: true)]\n-    private ?\\DateTimeImmutable $createdAt;\n+    private ?\\DateTimeImmutable $createdAt = null;\n \n     #[ORM\\ManyToOne(inversedBy: 'products')]\n     #[ORM\\JoinColumn(nullable: false)]\n     private ?category $category = null;\n"
+                },
+                {
+                    "date": 1668087674451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -115,9 +115,9 @@\n \n         return $this;\n     }\n \n-    public function getCreatedAt(): ?\\DateTimeImmutable\n+    public function getCreatedAt(): \\DateTimeImmutable\n     {\n         return $this->createdAt;\n     }\n \n"
+                },
+                {
+                    "date": 1668087679826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -120,9 +120,9 @@\n     {\n         return $this->createdAt;\n     }\n \n-    public function setCreatedAt(?\\DateTimeImmutable $createdAt): self\n+    public function setCreatedAt(\\DateTimeImmutable $createdAt): self\n     {\n         $this->createdAt = $createdAt;\n \n         return $this;\n"
+                },
+                {
+                    "date": 1668087768717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -120,9 +120,9 @@\n     {\n         return $this->createdAt;\n     }\n \n-    public function setCreatedAt(\\DateTimeImmutable $createdAt): self\n+    public function setCreatedAt( \\DateTimeImmutable $createdAt): self\n     {\n         $this->createdAt = $createdAt;\n \n         return $this;\n"
+                }
+            ],
+            "date": 1668072746637,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Entity;\n\nuse App\\Repository\\ProductRepository;\nuse Doctrine\\DBAL\\Types\\Types;\nuse Doctrine\\ORM\\Mapping as ORM;\n\n#[ORM\\Entity(repositoryClass: ProductRepository::class)]\nclass Product\n{\n    #[ORM\\Id]\n    #[ORM\\GeneratedValue]\n    #[ORM\\Column]\n    private ?int $id = null;\n\n    #[ORM\\Column(length: 255)]\n    private ?string $name = null;\n\n    #[ORM\\Column(type: Types::TEXT)]\n    private ?string $desrciption = null;\n\n    #[ORM\\Column(type: Types::DECIMAL, precision: 10, scale: 2)]\n    private ?string $price = null;\n\n    #[ORM\\Column(length: 255, nullable: true)]\n    private ?string $image = null;\n\n    #[ORM\\Column]\n    private ?bool $active = null;\n\n    #[ORM\\Column(nullable: true)]\n    private ?\\DateTimeImmutable $updatedAt = null;\n\n    #[ORM\\Column]\n    private ?\\DateTimeImmutable $createdAt = null;\n\n    #[ORM\\ManyToOne(inversedBy: 'products')]\n    #[ORM\\JoinColumn(nullable: false)]\n    private ?category $category = null;\n\n    public function getId(): ?int\n    {\n        return $this->id;\n    }\n\n    public function getName(): ?string\n    {\n        return $this->name;\n    }\n\n    public function setName(string $name): self\n    {\n        $this->name = $name;\n\n        return $this;\n    }\n\n    public function getDesrciption(): ?string\n    {\n        return $this->desrciption;\n    }\n\n    public function setDesrciption(string $desrciption): self\n    {\n        $this->desrciption = $desrciption;\n\n        return $this;\n    }\n\n    public function getPrice(): ?string\n    {\n        return $this->price;\n    }\n\n    public function setPrice(string $price): self\n    {\n        $this->price = $price;\n\n        return $this;\n    }\n\n    public function getImage(): ?string\n    {\n        return $this->image;\n    }\n\n    public function setImage(?string $image): self\n    {\n        $this->image = $image;\n\n        return $this;\n    }\n\n    public function isActive(): ?bool\n    {\n        return $this->active;\n    }\n\n    public function setActive(bool $active): self\n    {\n        $this->active = $active;\n\n        return $this;\n    }\n\n    public function getUpdatedAt(): ?\\DateTimeImmutable\n    {\n        return $this->updatedAt;\n    }\n\n    public function setUpdatedAt(?\\DateTimeImmutable $updatedAt): self\n    {\n        $this->updatedAt = $updatedAt;\n\n        return $this;\n    }\n\n    public function getCreatedAt(): ?\\DateTimeImmutable\n    {\n        return $this->createdAt;\n    }\n\n    public function setCreatedAt(\\DateTimeImmutable $createdAt): self\n    {\n        $this->createdAt = $createdAt;\n\n        return $this;\n    }\n\n    public function getCategory(): ?category\n    {\n        return $this->category;\n    }\n\n    public function setCategory(?category $category): self\n    {\n        $this->category = $category;\n\n        return $this;\n    }\n}\n"
+        }
+    ]
+}

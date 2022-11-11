@@ -1,0 +1,298 @@
+{
+    "sourceFile": "src/Controller/Admin/CategoryCrudController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 70,
+            "patches": [
+                {
+                    "date": 1668074721398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668074993436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n namespace App\\Controller\\Admin;\n \n-use App\\Entity\\Category;\n+use App\\Entity\\ategory;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n \n class CategoryCrudController extends AbstractCrudController\n {\n"
+                },
+                {
+                    "date": 1668076105018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n namespace App\\Controller\\Admin;\n \n-use App\\Entity\\ategory;\n+use App\\Entity\\category;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n \n class CategoryCrudController extends AbstractCrudController\n {\n@@ -11,9 +11,9 @@\n     {\n         return Category::class;\n     }\n \n-    /*\n+    \n     public function configureFields(string $pageName): iterable\n     {\n         return [\n             IdField::new('id'),\n"
+                },
+                {
+                    "date": 1668076115852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n     public function configureFields(string $pageName): iterable\n     {\n         return [\n             IdField::new('id'),\n-            TextField::new('title'),\n+            TextField::new('name'),\n             TextEditorField::new('description'),\n         ];\n     }\n-    */\n+    \n }\n"
+                },
+                {
+                    "date": 1668076124552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n     {\n         return [\n             IdField::new('id'),\n             TextField::new('name'),\n+            \n             TextEditorField::new('description'),\n         ];\n     }\n     \n"
+                },
+                {
+                    "date": 1668076135179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     {\n         return [\n             IdField::new('id'),\n             TextField::new('name'),\n-            \n+            TextField::new('active'),\n             TextEditorField::new('description'),\n         ];\n     }\n     \n"
+                },
+                {
+                    "date": 1668076145110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     public function configureFields(string $pageName): iterable\n     {\n         return [\n             IdField::new('id'),\n-            TextField::new('name'),\n+            nameField::new('name'),\n             TextField::new('active'),\n             TextEditorField::new('description'),\n         ];\n     }\n"
+                },
+                {
+                    "date": 1668076156291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     {\n         return [\n             IdField::new('id'),\n             nameField::new('name'),\n-            TextField::new('active'),\n+            Field::new('active'),\n             TextEditorField::new('description'),\n         ];\n     }\n     \n"
+                },
+                {
+                    "date": 1668076170538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n     {\n         return [\n             IdField::new('id'),\n             nameField::new('name'),\n-            Field::new('active'),\n-            TextEditorField::new('description'),\n+            activeField::new('active'),\n+            TextEditorField::new('crea'),\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668076176932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         return [\n             IdField::new('id'),\n             nameField::new('name'),\n             activeField::new('active'),\n-            TextEditorField::new('crea'),\n+            TextEditorField::new('createdAt'),\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668076217080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     public function configureFields(string $pageName): iterable\n     {\n         return [\n             IdField::new('id'),\n-            nameField::new('name'),\n+            Field::new('name'),\n             activeField::new('active'),\n             TextEditorField::new('createdAt'),\n         ];\n     }\n"
+                },
+                {
+                    "date": 1668076222341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     public function configureFields(string $pageName): iterable\n     {\n         return [\n             IdField::new('id'),\n-            Field::new('name'),\n+            TextField::new('name'),\n             activeField::new('active'),\n             TextEditorField::new('createdAt'),\n         ];\n     }\n"
+                },
+                {
+                    "date": 1668076227869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     {\n         return [\n             IdField::new('id'),\n             TextField::new('name'),\n-            activeField::new('active'),\n+            BoleanField::new('active'),\n             TextEditorField::new('createdAt'),\n         ];\n     }\n     \n"
+                },
+                {
+                    "date": 1668076247418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         return [\n             IdField::new('id'),\n             TextField::new('name'),\n             BoleanField::new('active'),\n-            TextEditorField::new('createdAt'),\n+            Field::new('createdAt'),\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668076253210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         return [\n             IdField::new('id'),\n             TextField::new('name'),\n             BoleanField::new('active'),\n-            Field::new('createdAt'),\n+            DateTimeField::new('createdAt'),\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668076425688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n namespace App\\Controller\\Admin;\n \n use App\\Entity\\category;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\Crud;\n \n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n"
+                },
+                {
+                    "date": 1668076439740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace App\\Controller\\Admin;\n \n use App\\Entity\\category;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n-use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\Crud;\n+use EasyCorp\\Bundle\\F\n \n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n"
+                },
+                {
+                    "date": 1668076445451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace App\\Controller\\Admin;\n \n use App\\Entity\\category;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n-use EasyCorp\\Bundle\\F\n+use EasyCorp\\Bundle\\Fie\n \n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n"
+                },
+                {
+                    "date": 1668076451368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace App\\Controller\\Admin;\n \n use App\\Entity\\category;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n-use EasyCorp\\Bundle\\Fie\n+use EasyCorp\\Bundle\\<Fieldset></Fieldset>\n \n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n"
+                },
+                {
+                    "date": 1668076485159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n namespace App\\Controller\\Admin;\n \n use App\\Entity\\category;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n-use EasyCorp\\Bundle\\<Fieldset></Fieldset>\n \n+\n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n     {\n"
+                },
+                {
+                    "date": 1668076503639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,12 @@\n namespace App\\Controller\\Admin;\n \n use App\\Entity\\category;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\DateTimeField;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\T;\n \n-\n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n     {\n"
+                },
+                {
+                    "date": 1668076509953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n use App\\Entity\\category;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\DateTimeField;\n-use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\T;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n \n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n"
+                },
+                {
+                    "date": 1668076522369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     {\n         return [\n             IdField::new('id'),\n             TextField::new('name'),\n-            BoleanField::new('active'),\n+            BooleanField::new('active'),\n             DateTimeField::new('createdAt'),\n         ];\n     }\n     \n"
+                },
+                {
+                    "date": 1668076621058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\DateTimeField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n \n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n"
+                },
+                {
+                    "date": 1668076626839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\DateTimeField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n-use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\Field;\n \n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n"
+                },
+                {
+                    "date": 1668076634724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\DateTimeField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n-use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\Field;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField\n \n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n"
+                },
+                {
+                    "date": 1668076643191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\DateTimeField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n-use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField;\n \n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n"
+                },
+                {
+                    "date": 1668076722208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n         return [\n             IdField::new('id'),\n             TextField::new('name'),\n             BooleanField::new('active'),\n-            DateTimeField::new('createdAt'),\n+            DateTimeField::new('updatedAt'),\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668076744920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     \n     public function configureFields(string $pageName): iterable\n     {\n         return [\n-            IdField::new('id'),\n+            IdField::new('id')->,\n             TextField::new('name'),\n             BooleanField::new('active'),\n             DateTimeField::new('updatedAt'),\n         ];\n"
+                },
+                {
+                    "date": 1668076776899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     \n     public function configureFields(string $pageName): iterable\n     {\n         return [\n-            IdField::new('id')->,\n+            IdField::new('id')->hi,\n             TextField::new('name'),\n             BooleanField::new('active'),\n             DateTimeField::new('updatedAt'),\n         ];\n"
+                },
+                {
+                    "date": 1668076787181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,12 +19,12 @@\n     \n     public function configureFields(string $pageName): iterable\n     {\n         return [\n-            IdField::new('id')->hi,\n+            IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             BooleanField::new('active'),\n-            DateTimeField::new('updatedAt'),\n+            DateTimeField::new('updatedAt')->,\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668076868998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,10 @@\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             BooleanField::new('active'),\n-            DateTimeField::new('updatedAt')->,\n+            DateTimeField::new('updatedAt')->hideOnForm(),\n         ];\n     }\n     \n+    \n }\n"
+                },
+                {
+                    "date": 1668076878305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,7 +25,14 @@\n             BooleanField::new('active'),\n             DateTimeField::new('updatedAt')->hideOnForm(),\n         ];\n     }\n+\n+    /**\n+     * @Route(\"Route\", name=\"RouteName\")\n+     */\n+    public function FunctionName(): Response\n+    {\n+        return $this->render('$0.html.twig', []);\n+    }\n     \n-    \n }\n"
+                },
+                {
+                    "date": 1668076887763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,13 +26,13 @@\n             DateTimeField::new('updatedAt')->hideOnForm(),\n         ];\n     }\n \n+    \n+    }\n     /**\n      * @Route(\"Route\", name=\"RouteName\")\n      */\n     public function FunctionName(): Response\n     {\n         return $this->render('$0.html.twig', []);\n-    }\n-    \n }\n"
+                },
+                {
+                    "date": 1668076897019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,12 +27,7 @@\n         ];\n     }\n \n     \n-    }\n-    /**\n-     * @Route(\"Route\", name=\"RouteName\")\n-     */\n-    public function FunctionName(): Response\n-    {\n-        return $this->render('$0.html.twig', []);\n+    pub\n+    \n }\n"
+                },
+                {
+                    "date": 1668076904856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,7 +27,7 @@\n         ];\n     }\n \n     \n-    pub\n+    public function pe\n     \n }\n"
+                },
+                {
+                    "date": 1668076928466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n namespace App\\Controller\\Admin;\n \n use App\\Entity\\category;\n+use Doctrine\\ORM\\EntityManagerInterface;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\DateTimeField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n@@ -27,7 +28,10 @@\n         ];\n     }\n \n     \n-    public function pe\n+    public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n+    {\n+        \n+    }\n     \n }\n"
+                },
+                {
+                    "date": 1668076962352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,8 @@\n \n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n-        \n+      dd  \n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668076968720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,8 @@\n \n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n-      dd  \n+      dd($en)  \n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077129387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,8 @@\n \n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n-      dd($en)  \n+      \n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077136105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,8 @@\n \n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n-      \n+        if()\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077145530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,8 @@\n \n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n-        if()\n+        if(!$)\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077158673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,8 @@\n \n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n-        if(!$)\n+        if(!$entityInstance inst)\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077168891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,8 @@\n \n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n-        if(!$entityInstance inst)\n+        if(!$entityInstance instanceof category)\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077176094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,8 @@\n \n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n-        if(!$entityInstance instanceof category)\n+        if(!$entityInstance instanceof category) return\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077193669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n \n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n-        if(!$entityInstance instanceof category) return\n+        if(!$entityInstance instanceof category) return;\n+        $\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077198787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n-        $\n+        $e\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077205345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n-        $e\n+        $entityInstance\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077212397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n-        $entityInstance\n+        $entityInstance->create\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077225818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n-        $entityInstance->create\n+        $entityInstance->createte\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077236718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n-        $entityInstance->createte\n+        $entityInstance->u\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077243173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n-        $entityInstance->u\n+        $entityInstance->getUpdatedAt()\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077255980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n-        $entityInstance->getUpdatedAt()\n+        $entityInstance->getUpdatedAt(ne)\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077261861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n-        $entityInstance->getUpdatedAt(ne)\n+        $entityInstance->getUpdatedAt(new \\)\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077269342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n-        $entityInstance->getUpdatedAt(new \\)\n+        $entityInstance->getUpdatedAt(new\\date)\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077277580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n-        $entityInstance->getUpdatedAt(new\\date)\n+        $entityInstance->getUpdatedAt(new\\date_create_immutable)\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077290073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n-        $entityInstance->getUpdatedAt(new\\date_create_immutable)\n+        $entityInstance->getUpdatedAt(new\\ )\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077303831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n-        $entityInstance->getUpdatedAt(new\\ )\n+        $entityInstance->getUpdatedAt(new \\Da )\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077317129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n     \n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n-        $entityInstance->getUpdatedAt(new \\Da )\n+        $entityInstance->getUpdatedAt(new \\DateTimeImmutable() );\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077322467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,7 +32,8 @@\n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n         $entityInstance->getUpdatedAt(new \\DateTimeImmutable() );\n+        parent::\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077333245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,8 @@\n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n         $entityInstance->getUpdatedAt(new \\DateTimeImmutable() );\n-        parent::\n+        parent::persistEntity()\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077338595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,8 @@\n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n         $entityInstance->getUpdatedAt(new \\DateTimeImmutable() );\n-        parent::persistEntity()\n+        parent::persistEntity($em ,)\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077344573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,8 @@\n     public function persistEntity(EntityManagerInterface $em, $entityInstance): void\n     {\n         if(!$entityInstance instanceof category) return;\n         $entityInstance->getUpdatedAt(new \\DateTimeImmutable() );\n-        parent::persistEntity($em ,)\n+        parent::persistEntity($em ,$entityInstance);\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668077856099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     {\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n-            BooleanField::new('active'),\n+           // BooleanField::new('active'),\n             DateTimeField::new('updatedAt')->hideOnForm(),\n         ];\n     }\n \n"
+                },
+                {
+                    "date": 1668077886150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     {\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n-           // BooleanField::new('active'),\n+            BooleanField::new('active'),\n             DateTimeField::new('updatedAt')->hideOnForm(),\n         ];\n     }\n \n"
+                },
+                {
+                    "date": 1668077924360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\DateTimeField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField;\n \n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n"
+                },
+                {
+                    "date": 1668077930609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\DateTimeField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField;\n-use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdAc\n \n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n"
+                },
+                {
+                    "date": 1668077937533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\DateTimeField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField;\n-use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdAc\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\A\n \n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n"
+                },
+                {
+                    "date": 1668077946016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\DateTimeField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField;\n-use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\A\n \n+\n class CategoryCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n     {\n"
+                },
+                {
+                    "date": 1668082952355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     {\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n-            BooleanField::new('active'),\n+           // BooleanField::new('active'),\n             DateTimeField::new('updatedAt')->hideOnForm(),\n         ];\n     }\n \n"
+                },
+                {
+                    "date": 1668083155545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     {\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n-           // BooleanField::new('active'),\n+            BooleanField::new('active'),\n             DateTimeField::new('updatedAt')->hideOnForm(),\n         ];\n     }\n \n"
+                }
+            ],
+            "date": 1668074721398,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Controller\\Admin;\n\nuse App\\Entity\\Category;\nuse EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n\nclass CategoryCrudController extends AbstractCrudController\n{\n    public static function getEntityFqcn(): string\n    {\n        return Category::class;\n    }\n\n    /*\n    public function configureFields(string $pageName): iterable\n    {\n        return [\n            IdField::new('id'),\n            TextField::new('title'),\n            TextEditorField::new('description'),\n        ];\n    }\n    */\n}\n"
+        }
+    ]
+}

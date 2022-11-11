@@ -1,0 +1,158 @@
+{
+    "sourceFile": "src/Controller/Admin/ProductCrudController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 35,
+            "patches": [
+                {
+                    "date": 1668083389089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668083429575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \n use App\\Entity\\Product;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n \n+\n class ProductCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n     {\n@@ -20,6 +21,6 @@\n             TextField::new('title'),\n             TextEditorField::new('description'),\n         ];\n     }\n-    */\n+    \n }\n"
+                },
+                {
+                    "date": 1668083446699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,13 @@\n namespace App\\Controller\\Admin;\n \n use App\\Entity\\Product;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\DateTimeField;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField;\n \n-\n class ProductCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n     {\n"
+                },
+                {
+                    "date": 1668083516167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n use App\\Entity\\Product;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n-use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\DateTimeField;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField;\n \n class ProductCrudController extends AbstractCrudController\n"
+                },
+                {
+                    "date": 1668083523407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n use App\\Entity\\Product;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n-use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\T;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField;\n \n class ProductCrudController extends AbstractCrudController\n"
+                },
+                {
+                    "date": 1668083531630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n use App\\Entity\\Product;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n-use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\T;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextEditorField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField;\n \n class ProductCrudController extends AbstractCrudController\n"
+                },
+                {
+                    "date": 1668083555603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     public function configureFields(string $pageName): iterable\n     {\n         return [\n             IdField::new('id'),\n-            TextField::new('title'),\n+            TextField::new('name'),\n             TextEditorField::new('description'),\n         ];\n     }\n     \n"
+                },
+                {
+                    "date": 1668083564424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     \n     public function configureFields(string $pageName): iterable\n     {\n         return [\n-            IdField::new('id'),\n+            IdField::new('id')->hi,\n             TextField::new('name'),\n             TextEditorField::new('description'),\n         ];\n     }\n"
+                },
+                {
+                    "date": 1668083599203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,12 @@\n     \n     public function configureFields(string $pageName): iterable\n     {\n         return [\n-            IdField::new('id')->hi,\n+            IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n+            Mo\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083605544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextEditorField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\MoneyField;\n \n class ProductCrudController extends AbstractCrudController\n {\n     public static function getEntityFqcn(): string\n@@ -22,9 +23,9 @@\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n-            Mo\n+            MoneyField\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083615054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n-            MoneyField\n+            MoneyField::new()\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083625010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n-            MoneyField::new()\n+            MoneyField::new('price')\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083630943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n-            MoneyField::new('price')\n+            MoneyField::new('price')->\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083637830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n-            MoneyField::new('price')->\n+            MoneyField::new('price')->set\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083649132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n-            MoneyField::new('price')->set\n+            MoneyField::new('price')->setCur\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083657898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n-            MoneyField::new('price')->setCur\n+            MoneyField::new('price')->setCurren\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083666051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n-            MoneyField::new('price')->setCurren\n+            MoneyField::new('price')->setCurrency('')\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083677142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         return [\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n-            MoneyField::new('price')->setCurrency('')\n+            MoneyField::new('price')->setCurrency('MGA'),\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083691028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n+            I\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083701769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n-            I\n+            Image\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083709765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\BooleanField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextEditorField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\TextField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\IdField;\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\ImageField;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\MoneyField;\n \n class ProductCrudController extends AbstractCrudController\n {\n@@ -24,9 +25,9 @@\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n-            Image\n+            ImageField::\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083716678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             IdField::new('id')->hideOnForm(),\n             TextField::new('name'),\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n-            ImageField::\n+            ImageField::new('image')\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083723539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n             TextField::new('name'),\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n             ImageField::new('image')\n+                \n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083737740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             TextField::new('name'),\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n             ImageField::new('image')\n-                \n+                ->setB\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083744012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             TextField::new('name'),\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n             ImageField::new('image')\n-                ->setB\n+                ->setBasePath(self)\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083754692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             TextField::new('name'),\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n             ImageField::new('image')\n-                ->setBasePath(self)\n+                ->setBasePath(self::PR)\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083763347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             TextField::new('name'),\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n             ImageField::new('image')\n-                ->setBasePath(self::PR)\n+                ->setBasePath(self::PRODUCT)\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083770444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             TextField::new('name'),\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n             ImageField::new('image')\n-                ->setBasePath(self::PRODUCT)\n+                ->setBasePath(self::PRODUCT_BASE_)\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083780857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,10 @@\n             TextField::new('name'),\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n             ImageField::new('image')\n-                ->setBasePath(self::PRODUCT_BASE_)\n+                ->setBasePath(self::PRODUCT_BASE_PATH)\n+                \n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083801355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n             ImageField::new('image')\n                 ->setBasePath(self::PRODUCT_BASE_PATH)\n-                \n+                ->SET\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083809725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n             ImageField::new('image')\n                 ->setBasePath(self::PRODUCT_BASE_PATH)\n-                ->SET\n+                ->\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083818120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n             ImageField::new('image')\n                 ->setBasePath(self::PRODUCT_BASE_PATH)\n-                ->\n+                ->setUploadDir()\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083823752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n             ImageField::new('image')\n                 ->setBasePath(self::PRODUCT_BASE_PATH)\n-                ->setUploadDir()\n+                ->setUploadDir(self:)\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083832771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n             ImageField::new('image')\n                 ->setBasePath(self::PRODUCT_BASE_PATH)\n-                ->setUploadDir(self:)\n+                ->setUploadDir(self::PRODUC)\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668083838388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n             TextEditorField::new('description'),\n             MoneyField::new('price')->setCurrency('MGA'),\n             ImageField::new('image')\n                 ->setBasePath(self::PRODUCT_BASE_PATH)\n-                ->setUploadDir(self::PRODUCTS)\n+                ->setUploadDir(self::PRODUCT)\n         ];\n     }\n     \n }\n"
+                },
+                {
+                    "date": 1668084063393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n use EasyCorp\\Bundle\\EasyAdminBundle\\Field\\MoneyField;\n \n class ProductCrudController extends AbstractCrudController\n {   \n-    public const PRODUCT_BASE_\n+    public const PRODUCT_BASE_P\n     public static function getEntityFqcn(): string\n     {\n         return Product::class;\n     }\n"
+                }
+            ],
+            "date": 1668083389088,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Controller\\Admin;\n\nuse App\\Entity\\Product;\nuse EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractCrudController;\n\nclass ProductCrudController extends AbstractCrudController\n{\n    public static function getEntityFqcn(): string\n    {\n        return Product::class;\n    }\n\n    \n    public function configureFields(string $pageName): iterable\n    {\n        return [\n            IdField::new('id'),\n            TextField::new('title'),\n            TextEditorField::new('description'),\n        ];\n    }\n    */\n}\n"
+        }
+    ]
+}

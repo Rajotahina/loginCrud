@@ -1,0 +1,174 @@
+{
+    "sourceFile": "src/Controller/Admin/DashboardController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 39,
+            "patches": [
+                {
+                    "date": 1668071760442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668071770824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n use Symfony\\Component\\HttpFoundation\\Response;\n use Symfony\\Component\\Routing\\Annotation\\Route;\n \n class DashboardController extends AbstractDashboardController\n-{    \n+{   \n+    public function\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n         return parent::index();\n"
+                },
+                {
+                    "date": 1668071777122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n use Symfony\\Component\\Routing\\Annotation\\Route;\n \n class DashboardController extends AbstractDashboardController\n {   \n-    public function\n+    public function _\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n         return parent::index();\n"
+                },
+                {
+                    "date": 1668071784328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,14 @@\n use Symfony\\Component\\Routing\\Annotation\\Route;\n \n class DashboardController extends AbstractDashboardController\n {   \n-    public function _\n+    public function __construct(\n+        \n+    )\n+    {\n+        \n+    }\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n         return parent::index();\n"
+                },
+                {
+                    "date": 1668071791118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n class DashboardController extends AbstractDashboardController\n {   \n     public function __construct(\n-        \n+        private\n     )\n     {\n         \n     }\n"
+                },
+                {
+                    "date": 1668071796510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n class DashboardController extends AbstractDashboardController\n {   \n     public function __construct(\n-        private\n+        private Adm\n     )\n     {\n         \n     }\n"
+                },
+                {
+                    "date": 1668071803006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n class DashboardController extends AbstractDashboardController\n {   \n     public function __construct(\n-        private Adm\n+        private AdminUrl\n     )\n     {\n         \n     }\n"
+                },
+                {
+                    "date": 1668071809751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n class DashboardController extends AbstractDashboardController\n {   \n     public function __construct(\n-        private AdminUrl\n+        private AdminUrlGenerato\n     )\n     {\n         \n     }\n"
+                },
+                {
+                    "date": 1668071816596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n class DashboardController extends AbstractDashboardController\n {   \n     public function __construct(\n-        private AdminUrlGenerato\n+        private AdminUrlGenerato $adm\n     )\n     {\n         \n     }\n"
+                },
+                {
+                    "date": 1668071823897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n class DashboardController extends AbstractDashboardController\n {   \n     public function __construct(\n-        private AdminUrlGenerato $adm\n+        private AdminUrlGenerato $adminUrlGenera\n     )\n     {\n         \n     }\n"
+                },
+                {
+                    "date": 1668071829440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n \n class DashboardController extends AbstractDashboardController\n {   \n     public function __construct(\n-        private AdminUrlGenerato $adminUrlGenera\n+        private AdminUrlGenerato $adminUrlGenerator{\n+            \n+        }\n     )\n     {\n         \n     }\n"
+                },
+                {
+                    "date": 1668071854026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n \n class DashboardController extends AbstractDashboardController\n {   \n     public function __construct(\n-        private AdminUrlGenerato $adminUrlGenerator{\n-            \n+        private AdminUrlGenerato $adminUrlGenerator\n+\n         }\n     )\n     {\n         \n"
+                },
+                {
+                    "date": 1668071862021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n \n class DashboardController extends AbstractDashboardController\n {   \n     public function __construct(\n-        private AdminUrlGenerato $adminUrlGenerator\n+        private AdminUrlGenerator $adminUrlGenerator\n \n-        }\n+        \n     )\n     {\n         \n     }\n"
+                },
+                {
+                    "date": 1668071872093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,8 @@\n class DashboardController extends AbstractDashboardController\n {   \n     public function __construct(\n         private AdminUrlGenerator $adminUrlGenerator\n-\n-        \n     )\n     {\n         \n     }\n"
+                },
+                {
+                    "date": 1668071959969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n namespace App\\Controller\\Admin;\n \n use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\Dashboard;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\MenuItem;\n+\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractDashboardController;\n use Symfony\\Component\\HttpFoundation\\Response;\n use Symfony\\Component\\Routing\\Annotation\\Route;\n \n"
+                },
+                {
+                    "date": 1668071965178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace App\\Controller\\Admin;\n \n use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\Dashboard;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\MenuItem;\n-\n+use Ea\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractDashboardController;\n use Symfony\\Component\\HttpFoundation\\Response;\n use Symfony\\Component\\Routing\\Annotation\\Route;\n \n"
+                },
+                {
+                    "date": 1668071973424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace App\\Controller\\Admin;\n \n use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\Dashboard;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\MenuItem;\n-use Ea\n+use EasyCorp\\Bundle\\EasyAdminBundle\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractDashboardController;\n use Symfony\\Component\\HttpFoundation\\Response;\n use Symfony\\Component\\Routing\\Annotation\\Route;\n \n"
+                },
+                {
+                    "date": 1668071983144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace App\\Controller\\Admin;\n \n use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\Dashboard;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\MenuItem;\n-use EasyCorp\\Bundle\\EasyAdminBundle\n+use EasyCorp\\Bundle\\EasyAdminBundle\\R\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractDashboardController;\n use Symfony\\Component\\HttpFoundation\\Response;\n use Symfony\\Component\\Routing\\Annotation\\Route;\n \n"
+                },
+                {
+                    "date": 1668071989510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace App\\Controller\\Admin;\n \n use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\Dashboard;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\MenuItem;\n-use EasyCorp\\Bundle\\EasyAdminBundle\\R\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Router\\AdminUrlGenerator\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractDashboardController;\n use Symfony\\Component\\HttpFoundation\\Response;\n use Symfony\\Component\\Routing\\Annotation\\Route;\n \n"
+                },
+                {
+                    "date": 1668072064461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace App\\Controller\\Admin;\n \n use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\Dashboard;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Config\\MenuItem;\n-use EasyCorp\\Bundle\\EasyAdminBundle\\Router\\AdminUrlGenerator\n+use EasyCorp\\Bundle\\EasyAdminBundle\\Router\\AdminUrlGenerator;\n use EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractDashboardController;\n use Symfony\\Component\\HttpFoundation\\Response;\n use Symfony\\Component\\Routing\\Annotation\\Route;\n \n@@ -19,8 +19,9 @@\n     }\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n+        \n         return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072071538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     }\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n-        \n+        $url =\n         return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072079603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     }\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n-        $url =\n+        $url = $this\n         return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072086623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     }\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n-        $url = $this\n+        $url = $this->adm\n         return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072093526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     }\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n-        $url = $this->adm\n+        $url = $this->adminUrlGenerator->\n         return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072101021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     }\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n-        $url = $this->adminUrlGenerator->\n+        $url = $this->adminUrlGenerator->set\n         return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072114261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     }\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n-        $url = $this->adminUrlGenerator->set\n+        $url = $this->adminUrlGenerator->setController(Pro)\n         return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072132919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     }\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n-        $url = $this->adminUrlGenerator->setController(Pro)\n+        $url = $this->adminUrlGenerator->setController(Produc)\n         return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072141042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     }\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n-        $url = $this->adminUrlGenerator->setController(Produc)\n+        $url = $this->adminUrlGenerator->setController(ProductCrudController)\n         return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072147662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     }\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n-        $url = $this->adminUrlGenerator->setController(ProductCrudController)\n+        $url = $this->adminUrlGenerator->setController(ProductCrudController::cla)\n         return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072174552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,10 @@\n     }\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n-        $url = $this->adminUrlGenerator->setController(ProductCrudController::cla)\n+        $url = $this->adminUrlGenerator->setController(ProductCrudController::class)\n+        \n         return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072190994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n         $url = $this->adminUrlGenerator->setController(ProductCrudController::class)\n-        \n+        -\n         return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072197304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n         $url = $this->adminUrlGenerator->setController(ProductCrudController::class)\n-        -\n+        ->generateUrl()\n         return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072259904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n     #[Route('/admin', name: 'admin')]\n     public function index(): Response\n     {\n         $url = $this->adminUrlGenerator->setController(ProductCrudController::class)\n-        ->generateUrl()\n-        return parent::index();\n+        ->generateUrl();\n+        //return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n         // $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);\n"
+                },
+                {
+                    "date": 1668072309381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n     public function index(): Response\n     {\n         $url = $this->adminUrlGenerator->setController(ProductCrudController::class)\n         ->generateUrl();\n+        \n         //return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072317029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n     public function index(): Response\n     {\n         $url = $this->adminUrlGenerator->setController(ProductCrudController::class)\n         ->generateUrl();\n-        \n+        return $this->redirect();\n         //return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072324650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n     public function index(): Response\n     {\n         $url = $this->adminUrlGenerator->setController(ProductCrudController::class)\n         ->generateUrl();\n-        return $this->redirect();\n+        return $this->redirect($url);\n         //return parent::index();\n \n         // Option 1. You can make your dashboard redirect to some common page of your backend\n         //\n"
+                },
+                {
+                    "date": 1668072566025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,8 +49,8 @@\n     }\n \n     public function configureMenuItems(): iterable\n     {\n-        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');\n+        yield MenuItem::section('Dashboard', 'fa fa-home');\n         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);\n     }\n }\n"
+                },
+                {
+                    "date": 1668072575860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,8 +49,8 @@\n     }\n \n     public function configureMenuItems(): iterable\n     {\n-        yield MenuItem::section('Dashboard', 'fa fa-home');\n+        yield MenuItem::section('ec');\n         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);\n     }\n }\n"
+                },
+                {
+                    "date": 1668072583503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,8 +49,8 @@\n     }\n \n     public function configureMenuItems(): iterable\n     {\n-        yield MenuItem::section('E-comme');\n+        yield MenuItem::section('E-commer');\n         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);\n     }\n }\n"
+                },
+                {
+                    "date": 1668073405140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,8 +51,8 @@\n     public function configureMenuItems(): iterable\n     {\n         yield MenuItem::section('E-commerce');\n         yield MenuItem::section('Product');\n-        yield MenuItem::section('Action');\n+        yield MenuItem::section('Actions');\n         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);\n     }\n }\n"
+                }
+            ],
+            "date": 1668071760442,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Controller\\Admin;\n\nuse EasyCorp\\Bundle\\EasyAdminBundle\\Config\\Dashboard;\nuse EasyCorp\\Bundle\\EasyAdminBundle\\Config\\MenuItem;\nuse EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AbstractDashboardController;\nuse Symfony\\Component\\HttpFoundation\\Response;\nuse Symfony\\Component\\Routing\\Annotation\\Route;\n\nclass DashboardController extends AbstractDashboardController\n{    \n    #[Route('/admin', name: 'admin')]\n    public function index(): Response\n    {\n        return parent::index();\n\n        // Option 1. You can make your dashboard redirect to some common page of your backend\n        //\n        // $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);\n        // return $this->redirect($adminUrlGenerator->setController(OneOfYourCrudController::class)->generateUrl());\n\n        // Option 2. You can make your dashboard redirect to different pages depending on the user\n        //\n        // if ('jane' === $this->getUser()->getUsername()) {\n        //     return $this->redirect('...');\n        // }\n\n        // Option 3. You can render some custom template to display a proper dashboard with widgets, etc.\n        // (tip: it's easier if your template extends from @EasyAdmin/page/content.html.twig)\n        //\n        // return $this->render('some/path/my-dashboard.html.twig');\n    }\n\n    public function configureDashboard(): Dashboard\n    {\n        return Dashboard::new()\n            ->setTitle('Exercice');\n    }\n\n    public function configureMenuItems(): iterable\n    {\n        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');\n        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);\n    }\n}\n"
+        }
+    ]
+}
